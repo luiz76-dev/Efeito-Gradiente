@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito Gradiente</title>
+    <style>        
+        .body{                       
+            height: 100vh;          
+            background: linear-gradient(45deg,blue,green,yellow,red);  
+            background-size: 350% 350%;            
+            animation: colors 30s ease infinite;    
+        } 
+        
+        @keyframes colors {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .texto{
+            position: absolute;
+            top: 35%;
+            left: 35%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 3rem;
+            font-weight: lighter;
+            color: rgb(151, 144, 144);
+            border: 3px solid rgb(151, 144, 144);
+            width: 30rem;
+            height: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;            
+            
+        }
+
+        .subtitulo { 
+            position: absolute ;          
+            color: #fff ;
+            bottom: 0%;
+            animation: moveSubtitulo 30s infinite alternate;            
+        }
+
+        @keyframes moveSubtitulo {        
+
+            from {
+                transform: translateY(-850px);
+            }
+        }
+      
+    </style>
+</head>
+<body class="body">
+    <h1 class="texto">Efeito Gradiente</h1>
+    <h2 class="subtitulo">Luiz Fernando</h2>
+</body>
+</html>
